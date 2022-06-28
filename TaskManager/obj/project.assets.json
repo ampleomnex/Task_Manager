@@ -280,6 +280,9 @@
           }
         }
       },
+      "VisualStudio.gitignore/1.0.1": {
+        "type": "package"
+      },
       "TaskManager.Model/1.0.0": {
         "type": "project",
         "compile": {
@@ -1039,6 +1042,20 @@
         "version.txt"
       ]
     },
+    "VisualStudio.gitignore/1.0.1": {
+      "sha512": "uF3VC/z+BWxr6q16MisLgpKm8YtzcfAE72nmo8nY4W3s0AFzGWecPKOUsc41qeQeUI/dU4cBduTMf6ccXMx3Zw==",
+      "type": "package",
+      "path": "visualstudio.gitignore/1.0.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "tools/init.ps1",
+        "visualstudio.gitignore.1.0.1.nupkg.sha512",
+        "visualstudio.gitignore.nuspec"
+      ]
+    },
     "TaskManager.Model/1.0.0": {
       "type": "project",
       "path": "../TaskManager.Model/TaskManager.Model.csproj",
@@ -1054,7 +1071,8 @@
     "net6.0": [
       "EntityFramework >= 6.4.4",
       "TaskManager.Model >= 1.0.0",
-      "TaskManager.Repository >= 1.0.0"
+      "TaskManager.Repository >= 1.0.0",
+      "VisualStudio.gitignore >= 1.0.1"
     ]
   },
   "packageFolders": {
@@ -1106,6 +1124,10 @@
           "EntityFramework": {
             "target": "Package",
             "version": "[6.4.4, )"
+          },
+          "VisualStudio.gitignore": {
+            "target": "Package",
+            "version": "[1.0.1, )"
           }
         },
         "imports": [

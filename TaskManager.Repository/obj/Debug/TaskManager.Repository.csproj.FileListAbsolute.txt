@@ -8,9 +8,10 @@ E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\bin\Debug\TaskManager.Mod
 E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\bin\Debug\EntityFramework.xml
 E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\bin\Debug\EntityFramework.SqlServer.xml
 E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\obj\Debug\TaskManager.Repository.csproj.AssemblyReference.cache
+E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\obj\Debug\TaskManager.Repository.Migrations.Initial_Migration.resources
+E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\obj\Debug\TaskManager.Repository.csproj.GenerateResource.cache
 E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\obj\Debug\TaskManager.Repository.csproj.CoreCompileInputs.cache
 E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\obj\Debug\TaskManager.Repository.csproj.CopyComplete
 E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\obj\Debug\TaskManager.Repository.dll
 E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\obj\Debug\TaskManager.Repository.pdb
-E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\obj\Debug\TaskManager.Repository.Migrations.InitialMigration.resources
-E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\obj\Debug\TaskManager.Repository.csproj.GenerateResource.cache
+E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\obj\Debug\TaskManager.Repository.Migrations.removedstatuscolumninDepartment.resources

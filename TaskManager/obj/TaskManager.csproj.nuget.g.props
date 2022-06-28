@@ -16,6 +16,7 @@
     <Import Project="$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props" Condition="Exists('$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgVisualStudio_gitignore Condition=" '$(PkgVisualStudio_gitignore)' == '' ">C:\Users\DELL\.nuget\packages\visualstudio.gitignore\1.0.1</PkgVisualStudio_gitignore>
     <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\DELL\.nuget\packages\entityframework\6.4.4</PkgEntityFramework>
   </PropertyGroup>
 </Project>

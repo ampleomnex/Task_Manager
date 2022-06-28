@@ -10,7 +10,8 @@
         "dependencies": {
           "EntityFramework": "6.4.4",
           "TaskManager.Model": "1.0.0",
-          "TaskManager.Repository": "1.0.0"
+          "TaskManager.Repository": "1.0.0",
+          "VisualStudio.gitignore": "1.0.1"
         },
         "runtime": {
           "TaskManager.dll": {}
@@ -224,6 +225,7 @@
           }
         }
       },
+      "VisualStudio.gitignore/1.0.1": {},
       "TaskManager.Model/1.0.0": {
         "runtime": {
           "TaskManager.Model.dll": {}
@@ -377,6 +379,13 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "VisualStudio.gitignore/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uF3VC/z+BWxr6q16MisLgpKm8YtzcfAE72nmo8nY4W3s0AFzGWecPKOUsc41qeQeUI/dU4cBduTMf6ccXMx3Zw==",
+      "path": "visualstudio.gitignore/1.0.1",
+      "hashPath": "visualstudio.gitignore.1.0.1.nupkg.sha512"
     },
     "TaskManager.Model/1.0.0": {
       "type": "project",

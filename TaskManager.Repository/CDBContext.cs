@@ -10,14 +10,16 @@ namespace TaskManager.Repository
 {
     public class CDBContext:DbContext
     {
-        public CDBContext():base("TaskManager")
+        
+        public CDBContext():base("Data Source=tcp:myomnex.database.windows.net,1433;Initial Catalog=OmnexEmployeeManagement;Persist Security Info=False;User ID=OmLoginUser;Password=Test@123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30")
         {
 
         }
         public DbSet<Department> Departments { get; set; }
 
-        public DbSet<Function> Functions { get; set; }
+        public DbSet<Function> Functions { get; set; } 
 
-       
+
+
     }
 }

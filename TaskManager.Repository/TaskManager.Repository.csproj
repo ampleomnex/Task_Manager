@@ -52,9 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CDBContext.cs" />
-    <Compile Include="Migrations\202206270915553_InitialMigration.cs" />
-    <Compile Include="Migrations\202206270915553_InitialMigration.designer.cs">
-      <DependentUpon>202206270915553_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202206280535357_Initial_Migration.cs" />
+    <Compile Include="Migrations\202206280535357_Initial_Migration.designer.cs">
+      <DependentUpon>202206280535357_Initial_Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206280624547_removed-status-column-inDepartment.cs" />
+    <Compile Include="Migrations\202206280624547_removed-status-column-inDepartment.designer.cs">
+      <DependentUpon>202206280624547_removed-status-column-inDepartment.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,8 +74,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202206270915553_InitialMigration.resx">
-      <DependentUpon>202206270915553_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202206280535357_Initial_Migration.resx">
+      <DependentUpon>202206280535357_Initial_Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206280624547_removed-status-column-inDepartment.resx">
+      <DependentUpon>202206280624547_removed-status-column-inDepartment.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

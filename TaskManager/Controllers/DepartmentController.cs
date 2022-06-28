@@ -13,7 +13,7 @@ namespace TaskManager.Controllers
 
         public DepartmentController(CDBContext context)
         {
-            context = _context;
+             _context = context;
         }
 
         //GET: Department
