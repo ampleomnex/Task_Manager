@@ -1,6 +1,16 @@
 using TaskManager.Repository;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using TaskManager.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("TaskManagerContextConnection") ?? throw new InvalidOperationException("Connection string 'TaskManagerContextConnection' not found.");
+
+builder.Services.AddDbContext<TaskManagerContext>(options =>
+    options.UseSqlServer(connectionString));
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<TaskManagerContext>();
 
 builder.Services.AddScoped<CDBContext>();
 // Add services to the container.
@@ -21,11 +31,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();;
 
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
+app.MapRazorPages();
 app.Run();
