@@ -15,6 +15,12 @@ namespace TaskManager.Repository
         {
 
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer<CDBContext>(null);
+            base.OnModelCreating(modelBuilder);
+        }
         public DbSet<Department> Departments { get; set; }
 
         public DbSet<Function> Functions { get; set; } 
