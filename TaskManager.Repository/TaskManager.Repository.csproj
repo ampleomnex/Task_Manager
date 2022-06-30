@@ -60,6 +60,10 @@
     <Compile Include="Migrations\202206280624547_removed-status-column-inDepartment.designer.cs">
       <DependentUpon>202206280624547_removed-status-column-inDepartment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206290614073_AddTaskModel.cs" />
+    <Compile Include="Migrations\202206290614073_AddTaskModel.designer.cs">
+      <DependentUpon>202206290614073_AddTaskModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -79,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206280624547_removed-status-column-inDepartment.resx">
       <DependentUpon>202206280624547_removed-status-column-inDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206290614073_AddTaskModel.resx">
+      <DependentUpon>202206290614073_AddTaskModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

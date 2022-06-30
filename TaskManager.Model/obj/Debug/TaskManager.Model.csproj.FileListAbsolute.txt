@@ -4,3 +4,9 @@ E:\ASP.Net_Projects\TaskManager\TaskManager.Model\obj\Debug\TaskManager.Model.cs
 E:\ASP.Net_Projects\TaskManager\TaskManager.Model\obj\Debug\TaskManager.Model.csproj.CoreCompileInputs.cache
 E:\ASP.Net_Projects\TaskManager\TaskManager.Model\obj\Debug\TaskManager.Model.dll
 E:\ASP.Net_Projects\TaskManager\TaskManager.Model\obj\Debug\TaskManager.Model.pdb
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Model\bin\Debug\TaskManager.Model.dll
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Model\bin\Debug\TaskManager.Model.pdb
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Model\obj\Debug\TaskManager.Model.csproj.AssemblyReference.cache
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Model\obj\Debug\TaskManager.Model.csproj.CoreCompileInputs.cache
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Model\obj\Debug\TaskManager.Model.dll
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Model\obj\Debug\TaskManager.Model.pdb

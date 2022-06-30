@@ -11025,19 +11025,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\Omnex\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ASP.Net_Projects\\TaskManager\\TaskManager\\TaskManager.csproj",
+      "projectUniqueName": "D:\\Asp Net\\Task_MN\\Task_Manager\\TaskManager\\TaskManager.csproj",
       "projectName": "TaskManager",
-      "projectPath": "E:\\ASP.Net_Projects\\TaskManager\\TaskManager\\TaskManager.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "E:\\ASP.Net_Projects\\TaskManager\\TaskManager\\obj\\",
+      "projectPath": "D:\\Asp Net\\Task_MN\\Task_Manager\\TaskManager\\TaskManager.csproj",
+      "packagesPath": "C:\\Users\\Omnex\\.nuget\\packages\\",
+      "outputPath": "D:\\Asp Net\\Task_MN\\Task_Manager\\TaskManager\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Omnex\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11051,11 +11051,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\ASP.Net_Projects\\TaskManager\\TaskManager.Model\\TaskManager.Model.csproj": {
-              "projectPath": "E:\\ASP.Net_Projects\\TaskManager\\TaskManager.Model\\TaskManager.Model.csproj"
+            "D:\\Asp Net\\Task_MN\\Task_Manager\\TaskManager.Model\\TaskManager.Model.csproj": {
+              "projectPath": "D:\\Asp Net\\Task_MN\\Task_Manager\\TaskManager.Model\\TaskManager.Model.csproj"
             },
-            "E:\\ASP.Net_Projects\\TaskManager\\TaskManager.Repository\\TaskManager.Repository.csproj": {
-              "projectPath": "E:\\ASP.Net_Projects\\TaskManager\\TaskManager.Repository\\TaskManager.Repository.csproj"
+            "D:\\Asp Net\\Task_MN\\Task_Manager\\TaskManager.Repository\\TaskManager.Repository.csproj": {
+              "projectPath": "D:\\Asp Net\\Task_MN\\Task_Manager\\TaskManager.Repository\\TaskManager.Repository.csproj"
             }
           }
         }
