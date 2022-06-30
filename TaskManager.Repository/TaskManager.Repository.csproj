@@ -64,6 +64,10 @@
     <Compile Include="Migrations\202206290614073_AddTaskModel.designer.cs">
       <DependentUpon>202206290614073_AddTaskModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206301205221_TeamTable.cs" />
+    <Compile Include="Migrations\202206301205221_TeamTable.designer.cs">
+      <DependentUpon>202206301205221_TeamTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -86,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206290614073_AddTaskModel.resx">
       <DependentUpon>202206290614073_AddTaskModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206301205221_TeamTable.resx">
+      <DependentUpon>202206301205221_TeamTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
