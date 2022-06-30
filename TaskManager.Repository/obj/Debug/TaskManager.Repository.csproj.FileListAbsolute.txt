@@ -15,3 +15,21 @@ E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\obj\Debug\TaskManager.Rep
 E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\obj\Debug\TaskManager.Repository.dll
 E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\obj\Debug\TaskManager.Repository.pdb
 E:\ASP.Net_Projects\TaskManager\TaskManager.Repository\obj\Debug\TaskManager.Repository.Migrations.removedstatuscolumninDepartment.resources
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\bin\Debug\TaskManager.Repository.dll.config
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\bin\Debug\TaskManager.Repository.dll
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\bin\Debug\TaskManager.Repository.pdb
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\bin\Debug\EntityFramework.dll
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\bin\Debug\TaskManager.Model.dll
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\bin\Debug\TaskManager.Model.pdb
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\bin\Debug\EntityFramework.xml
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\obj\Debug\TaskManager.Repository.csproj.AssemblyReference.cache
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\obj\Debug\TaskManager.Repository.Migrations.Initial_Migration.resources
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\obj\Debug\TaskManager.Repository.Migrations.removedstatuscolumninDepartment.resources
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\obj\Debug\TaskManager.Repository.Migrations.AddTaskModel.resources
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\obj\Debug\TaskManager.Repository.csproj.GenerateResource.cache
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\obj\Debug\TaskManager.Repository.csproj.CoreCompileInputs.cache
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\obj\Debug\TaskManager.Repository.csproj.CopyComplete
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\obj\Debug\TaskManager.Repository.dll
+D:\Asp Net\Task_MN\Task_Manager\TaskManager.Repository\obj\Debug\TaskManager.Repository.pdb

@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using TaskManager.Data
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -21,51 +27,59 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" >
                     <ul class="navbar-nav flex-grow-1">
-                       
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Task" asp-action="Index">Task</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Reports</a>
-                        </li>
-                       <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Functions" asp-action="Index">Functions</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Department" asp-action="Index">Department</a>
-                        </li>
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Task" asp-action="Index">Task</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Reports</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Functions" asp-action="Index">Functions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Department" asp-action="Index">Department</a>
+                            </li>
+                        
 
-                        @*<li class="nav-item dropdown">
-                            <a data-toggle="dropdown" class="dropdown-toggle nav-link" href="#"><span class="glyphicon glyphicon-list-alt"></span> Manage <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Employee</a>
-                                </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Project</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Functions" asp-action="Index">Functions</a>
-                                </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Role</a>
-                                </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Epic</a>
-                                </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Team</a>
-                                </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Customer</a>
-                                </li>
+                            <li class="nav-item dropdown">
+                              @*  <a data-toggle="dropdown" class="dropdown-toggle nav-link" href="#"><span class="glyphicon glyphicon-list-alt"></span> Manage <b class="caret"></b></a>*@
+                                <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Manage
+                                    </button>
+                                <ul class="dropdown-menu">
+                                     <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Employee</a>
+                                    </li>
+                                     <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Project</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Functions" asp-action="Index">Functions</a>
+                                    </li>
+                                     <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Role</a>
+                                    </li>
+                                     <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Epic</a>
+                                    </li>
+                                     <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Team</a>
+                                    </li>
+                                     <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Customer</a>
+                                    </li>
                                 
-                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Department" asp-action="Index">Department</a>
-                                </li>
-                            </ul>
-                        </li>*@
+                                     <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Department" asp-action="Index">Department</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        }
                     </ul>
+                    <partial name="_LoginPartial" />                    
+
                 </div>
             </div>
         </nav>
@@ -83,7 +97,7 @@
     </footer>
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+        <script src="~/js/site.js" asp-append-version="true"></script>        
+        @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
