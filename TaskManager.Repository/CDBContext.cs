@@ -28,6 +28,8 @@ namespace TaskManager.Repository
 
         public DbSet<Team> Teams { get; set; }
 
+        public DbSet<Customer> Customers { get; set; }
+
 
 
 
