@@ -34,20 +34,11 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Reports</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Functions" asp-action="Index">Functions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Department" asp-action="Index">Department</a>
-                            </li>
-                        
+                            </li>                        
 
                             <li class="nav-item dropdown">
-                              @*  <a data-toggle="dropdown" class="dropdown-toggle nav-link" href="#"><span class="glyphicon glyphicon-list-alt"></span> Manage <b class="caret"></b></a>*@
-                                <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Manage
-                                    </button>
+                               <a class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span> Manage <b class="caret"></b></a>
+                              
                                 <ul class="dropdown-menu">
                                      <li class="nav-item">
                                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Employee</a>
