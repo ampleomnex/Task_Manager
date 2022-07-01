@@ -339,10 +339,10 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 
-/.vs
-/TaskManager/bin
-/TaskManager/obj
-/TaskManager.Model/bin
-/TaskManager.Model/obj
-/TaskManager.Repository/bin
-/TaskManager.Repository/obj
+/.vs/
+/TaskManager/bin/
+/TaskManager/obj/
+/TaskManager.Model/bin/
+/TaskManager.Model/obj/
+/TaskManager.Repository/bin/
+/TaskManager.Repository/obj/
