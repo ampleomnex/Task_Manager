@@ -26,6 +26,11 @@ namespace TaskManager.Repository
         public DbSet<Function> Functions { get; set; }
         public DbSet<Task_tbl> Tasks { get; set; }
 
+        public DbSet<Team> Teams { get; set; }
+
+        public DbSet<Customer> Customers { get; set; }
+
+
 
 
     }

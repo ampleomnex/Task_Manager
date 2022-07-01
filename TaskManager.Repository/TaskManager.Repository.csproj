@@ -64,6 +64,18 @@
     <Compile Include="Migrations\202206290614073_AddTaskModel.designer.cs">
       <DependentUpon>202206290614073_AddTaskModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206301205221_TeamTable.cs" />
+    <Compile Include="Migrations\202206301205221_TeamTable.designer.cs">
+      <DependentUpon>202206301205221_TeamTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207010417339_CustomerTable.cs" />
+    <Compile Include="Migrations\202207010417339_CustomerTable.designer.cs">
+      <DependentUpon>202207010417339_CustomerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207010428422_CustomerTablePhoneChange.cs" />
+    <Compile Include="Migrations\202207010428422_CustomerTablePhoneChange.designer.cs">
+      <DependentUpon>202207010428422_CustomerTablePhoneChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -86,6 +98,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206290614073_AddTaskModel.resx">
       <DependentUpon>202206290614073_AddTaskModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206301205221_TeamTable.resx">
+      <DependentUpon>202206301205221_TeamTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207010417339_CustomerTable.resx">
+      <DependentUpon>202207010417339_CustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207010428422_CustomerTablePhoneChange.resx">
+      <DependentUpon>202207010428422_CustomerTablePhoneChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
