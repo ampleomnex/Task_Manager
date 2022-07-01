@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="Task_tbl.cs" />
     <Compile Include="Function.cs" />
