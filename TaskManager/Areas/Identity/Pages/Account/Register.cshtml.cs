@@ -18,6 +18,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using AutoMapper;
 using TaskManager.Data;
 
 namespace TaskManager.Areas.Identity.Pages.Account
@@ -26,16 +27,20 @@ namespace TaskManager.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IUserStore<IdentityUser> _userStore;
         private readonly IUserEmailStore<IdentityUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly IMapper _mapper;
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
+            RoleManager<IdentityRole> roleManager,
             IUserStore<IdentityUser> userStore,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
+            IMapper mapper,
             IEmailSender emailSender)
         {
             _userManager = userManager;
@@ -44,6 +49,8 @@ namespace TaskManager.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _roleManager = roleManager;
+            _mapper = mapper;
         }
 
         /// <summary>
@@ -113,11 +120,31 @@ namespace TaskManager.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
+
+                bool adminRoleExists = await _roleManager.RoleExistsAsync("admin");
+                if (!adminRoleExists)
+                {
+                    IdentityRole role = new IdentityRole()
+                    {
+                        Name = "admin",
+                        NormalizedName = "ADMIN"
+                    };
+                    var AspNetRoles = _mapper.Map<IdentityRole>(role);
+                    await _roleManager.CreateAsync(AspNetRoles);
+                }
+
                 var user = CreateUser();
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-                var result = await _userManager.CreateAsync(user, Input.Password);
+
+                var AspNetUsers = _mapper.Map<IdentityUser>(user);
+                var result = await _userManager.CreateAsync(AspNetUsers, Input.Password);
+                if (!await _userManager.IsInRoleAsync(AspNetUsers, "admin"))
+                {
+                    var userResult = await _userManager.AddToRoleAsync(AspNetUsers, "admin");
+                }
+                // var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
