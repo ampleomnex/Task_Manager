@@ -1,7 +1,8 @@
-﻿@model TaskManager.Model.Department
+﻿@model TaskManager.Model.Task_tbl
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Task";
+    //var test = ((List<SelectListItem>)ViewBag.EmployeeID).Where(x => x.Value == Model.EmployeeID.ToString()).Select(x=>x.Text).First();
 }
 
 <h2>Details</h2>
@@ -10,15 +11,28 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.DepartmentName)
+            @Html.DisplayNameFor(model => model.TaskName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.DepartmentName)
+            @Html.DisplayFor(model => model.TaskName)
         </dd>
-
         <dt>
-            @Html.DisplayNameFor(model => model.CreatedBy)
+            @Html.DisplayNameFor(model => model.PriorityID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriorityID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model =>  model.CreatedBy)
         </dt>
 
         <dd>
@@ -36,6 +50,6 @@
     </dl>
 </div>
 <div class="form-group">
-    <a type="button" class="btn btn-primary" href="@Url.Action("Edit", "Department", new { id = Model.Id })">Edit</a>
-    <a type="button" class="btn btn-secondary" href="@Url.Action("Index", "Department")">Cancel</a>
+    <a type="button" class="btn btn-primary" href="@Url.Action("Edit", "Task", new { id = Model.Id })">Edit</a>
+    <a type="button" class="btn btn-secondary" href="@Url.Action("Index", "Task")">Cancel</a>
 </div>

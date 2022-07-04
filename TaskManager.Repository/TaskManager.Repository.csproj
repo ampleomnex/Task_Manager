@@ -76,6 +76,10 @@
     <Compile Include="Migrations\202207010428422_CustomerTablePhoneChange.designer.cs">
       <DependentUpon>202207010428422_CustomerTablePhoneChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202207040827512_EmployeeID-DataType-ChangedIn-TaskTable.cs" />
+    <Compile Include="Migrations\202207040827512_EmployeeID-DataType-ChangedIn-TaskTable.designer.cs">
+      <DependentUpon>202207040827512_EmployeeID-DataType-ChangedIn-TaskTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -107,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202207010428422_CustomerTablePhoneChange.resx">
       <DependentUpon>202207010428422_CustomerTablePhoneChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207040827512_EmployeeID-DataType-ChangedIn-TaskTable.resx">
+      <DependentUpon>202207040827512_EmployeeID-DataType-ChangedIn-TaskTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

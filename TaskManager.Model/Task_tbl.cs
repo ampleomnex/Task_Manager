@@ -26,7 +26,7 @@ namespace TaskManager.Model
 
         [Required(ErrorMessage = "Employee is required.")]
         [Display(Name = "Employee")]
-        public int EmployeeID { get; set; }
+        public string EmployeeID { get; set; }
         /*public virtual int EmployeeID { get; set; }*/
         /*public virtual Department Departments { get; set; }*/
 

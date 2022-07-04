@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
@@ -11,19 +12,24 @@ namespace TaskManager.Controllers
     public class TaskController : Controller
     {
         private readonly CDBContext _context = new CDBContext();
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public TaskController(CDBContext context)
+        public TaskController(CDBContext context, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             context = _context;
+            _userManager = userManager;
+            _roleManager = roleManager; 
         }
 
-        //GET: Functions
+        //GET: Task
         public async Task<IActionResult> Index()
         {
+            await getEmployees();
             return View(await _context.Tasks.ToListAsync());
         }
 
-        //GET: Functions/Details
+        //GET: Task/Details
         public async Task<IActionResult> Details(int id)
         {
             if (id == 0 || _context.Tasks == null)
@@ -36,14 +42,34 @@ namespace TaskManager.Controllers
             {
                 return NotFound();
             }
-            /*ViewData["DepartmentID"] = new SelectList(_context.Set<Department>(), "Id", "DepartmentName", tasks.DepartmentID);*/
+            await getEmployees();
             return View(tasks);
 
         }
 
-        //GET: Functions/Create
-        public IActionResult Create()
+        public async Task getEmployees()
         {
+            bool employeeRoleExists = await _roleManager.RoleExistsAsync("employee");
+            if(employeeRoleExists)
+            {
+                var resUsers = await _userManager.GetUsersInRoleAsync("employee");
+                List<SelectListItem> Employeeid = resUsers
+                              .Select(a => new SelectListItem()
+                              {
+                                  Value = a.Id,
+                                  Text = a.UserName
+                              }).ToList();
+
+                ViewData["EmployeeID"] = Employeeid;
+            }
+        }
+
+
+
+        //GET: Task/Create
+        public async Task<IActionResult> Create()
+        {
+            await getEmployees();
             List<SelectListItem> Priorityid = new List<SelectListItem>() {
                                     new SelectListItem {
                                         Text = "Immediate", Value = "1"
@@ -58,18 +84,11 @@ namespace TaskManager.Controllers
                                     }
                                 };
             ViewBag.PriorityID = Priorityid;
-            List<SelectListItem> Employeeid = new List<SelectListItem>() {
-                                    new SelectListItem {
-                                        Text = "E-One", Value = "1"
-                                    },new SelectListItem {
-                                        Text = "E-One", Value = "2"
-                                    }
-                                };
-            ViewBag.EmployeeID = Employeeid;
+            
             return View();
         }
 
-        //POST: Functions/Create
+        //POST: Task/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,TaskName,PriorityID,EstTime,EmployeeID,DueDate,CreatedBy,CreatedDate")] Task_tbl tasks)
@@ -90,7 +109,7 @@ namespace TaskManager.Controllers
             return View();
         }
 
-        //GET: Functions/Edit
+        //GET: Task/Edit
         public async Task<IActionResult> Edit(int id)
         {
             if (id == 0 || _context.Tasks == null)
@@ -117,18 +136,11 @@ namespace TaskManager.Controllers
                                     }
                                 };
             ViewBag.PriorityID = Priorityid;
-            List<SelectListItem> Employeeid = new List<SelectListItem>() {
-                                    new SelectListItem {
-                                        Text = "E-One", Value = "1"
-                                    },new SelectListItem {
-                                        Text = "E-One", Value = "2"
-                                    }
-                                };
-            ViewBag.EmployeeID = Employeeid;
+            await getEmployees();
             return View(tasks);
         }
 
-        //POST: Department/Edit
+        //POST: Task/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,TaskName,PriorityID,EstTime,EmployeeID,DueDate,CreatedBy,CreatedDate")] Task_tbl tasks)
@@ -147,7 +159,7 @@ namespace TaskManager.Controllers
 
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!FunctionExists(tasks.Id))
+                    if (!TaskExists(tasks.Id))
                     {
                         return NotFound();
                     }
@@ -162,44 +174,44 @@ namespace TaskManager.Controllers
             return View(tasks);
         }
 
-        //GET: Functions/Delete
+        //GET: Task/Delete
         public async Task<IActionResult> Delete(int id)
         {
-            if (id == 0 || _context.Functions == null)
+            if (id == 0 || _context.Tasks == null)
             {
                 return NotFound();
             }
 
-            var functions = await _context.Functions.FirstOrDefaultAsync(m => m.Id == id);
-            if (functions == null)
+            var tasks = await _context.Tasks.FirstOrDefaultAsync(m => m.Id == id);
+            if (tasks == null)
             {
                 return NotFound();
             }
-            return View(functions);
+            return View(tasks);
         }
 
-        //POST: Function/Delete
+        //POST: Task/Delete
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (id == 0 || _context.Functions == null)
+            if (id == 0 || _context.Tasks == null)
             {
                 return NotFound();
             }
 
-            var functions = await _context.Functions.FindAsync(id);
-            if (functions != null)
+            var tasks = await _context.Tasks.FindAsync(id);
+            if (tasks != null)
             {
-                _context.Functions.Remove(functions);
+                _context.Tasks.Remove(tasks);
             }
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool FunctionExists(int id)
+        private bool TaskExists(int id)
         {
-            return _context.Functions.Any(e => e.Id == id);
+            return _context.Tasks.Any(e => e.Id == id);
         }
     }
 }
